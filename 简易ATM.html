@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>2021.7.18</title>
+    <script>
+        var balance = 100;
+        for (var i = 1; i <= Infinity; i++) {
+            var num = prompt('请输入您要的操作编号：\n' + '1.存钱\n' + '2.取钱\n' + '3.余额\n' + '4.退出');
+            if (num == 1) {
+                var money = prompt('请输入存入钱数');
+                balance += parseFloat(money);
+                alert('您的余额为：' + balance);
+            } else if (num == 2) {
+                var downmoney = prompt('请输入取出钱数');
+                if (downmoney <= balance) {
+                    balance -= parseFloat(downmoney);
+                    alert('您的余额为：' + balance);
+                } else {
+                    alert('您的余额不足，请重新输入')
+                }
+            } else if (num == 3) {
+                alert('您的余额为：' + balance);
+            } else if (num == 4) {
+                alert('已结束操作')
+                break;
+            } else {
+                alert('您的输入有误，请重新输入')
+            }
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
