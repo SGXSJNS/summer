@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>2021.7.18</title>
+        <script>
+            for(var i = 1; i <= 5; i++){
+                if(i == 3){
+                    continue; //退出本次循环，直接跳到i++（执行下一次）
+                }console.log('这是我吃的第' + i + '个樱桃');
+            }
+
+            //1~100间，除能被7整除外的整数和
+            var k = 0;
+            for(var i = 1; i <= 100; i++){
+                if(i % 7 == 0){
+                    continue;
+                }
+                k += i;               
+            }
+            console.log(k);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
