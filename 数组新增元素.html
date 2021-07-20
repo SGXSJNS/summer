@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>2021.7.18</title>
+    <script>
+        // 新增————修改length长度
+        var arr = ['jns', 'ml', 'zhd', 'sgxs'];
+        arr.length = 7;
+        console.log(arr);
+        console.log(arr[4]);
+
+        // 新增————修改索引号,追加
+        var arr1 = ['jns', 'ml', 'zhd', 'sgxs'];
+        arr1[4] = 'pink';
+        console.log(arr1);
+        arr1[1] = 'red'; // 替换
+        console.log(arr1);
+
+        // 将1~10整数存入数组
+        var arr3 = [];
+        for (var i = 0; i < 10; i++) {
+            arr3[i] = i + 1;
+        }
+        console.log(arr3);
+
+        //将数组[2,10,6,1,77,0,52,0,25,7]中大于等于10的元素选出来，放入新数组
+        var arr4 = [2, 10, 6, 1, 77, 0, 52, 0, 25, 7];
+        var arr5 = [];
+        for (var i = 0; i < arr4.length; i++) {
+            if (arr4[i] >= 10) {
+                arr5[arr5.length] = arr4[i];
+            }
+        }
+        console.log(arr5);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
