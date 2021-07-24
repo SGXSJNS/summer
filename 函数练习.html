@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>2021.7.23</title>
+    <script>
+        // 1.函数求任意两个数的和
+        var start = prompt('输入数字');
+        var end = prompt('输入数字');
+
+        function sayYes(start, end) {
+            console.log(start + end);
+        }
+        sayYes(parseFloat(start), parseFloat(end));
+
+        // 1.函数求任意两个数之间的和
+        var kum = 0;
+
+        function getSum(num1, num2) {
+            for (var i = num1; i <= num2; i++) {
+                kum += i;
+            }
+            console.log(kum);
+        }
+        getSum(1, 100);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
