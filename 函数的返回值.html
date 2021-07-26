@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>2021.7.26</title>
+    <script>
+        // return是终止函数，后面的代码不会被执行，返回的结果是最后一个值
+
+
+        function getBig(num1, num2) {
+            // if (num1 > num2) {
+            //     return num1;
+            // } else {
+            //     return num2;
+            // }
+            return num1 > num2 ? num1 : num2; // 三元表达式
+        }
+        console.log(getBig(1, 99));
+
+
+        function getMax(arr) {
+            var max = arr[0];
+            for (var i = 1; i <= arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        var re = getMax([5, 9, 85, 58, 0, 24]);
+        console.log(re);
+
+        // 求任意两个数的加减乘除的结果
+        function getTwo(sum1, sum2) {
+            return [sum1 + sum2, sum1 - sum2, sum1 * sum2, sum1 / sum2];
+        }
+        console.log(getTwo(1, 2));
+
+        // 我们的函数如果有return则返回的是return后面的值，如果没有return则返回undefined
+        function fun1() {
+            return 666;
+        }
+        console.log(fun1()); // 返回666
+
+        function fun2() {
+
+        }
+        console.log(fun2()); // 函数的返回结果是undefined
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
