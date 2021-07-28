@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>2021.7.26</title>
+    <script>
+        // 写一个函数，用户输入任意两个数字的任意算数运算（简易计算器），并能弹出运算结果
+        // function getnum(num1, sign, num2) {
+        //     if (sign == '+') {
+        //         return num1 + num2;
+        //     } else if (sign == '-') {
+        //         return num1 - num2;
+        //     } else if (sign == '*') {
+        //         return num1 * num2;
+        //     } else if (sign == '/') {
+        //         return num1 / num2;
+        //     }
+
+        // }
+        // var re = getnum(parseFloat(prompt('输入数字')), prompt('输入操作符(+;—;*;/)'), parseFloat(prompt('输入数字')));
+        // alert(re);
+
+
+        // 写一个函数，用户输入任意两个数字的最大值，并能弹出运算后的结果
+        // function getsum(sum1, sum2) {
+        //     return sum1 > sum2 ? sum1 : sum2;
+        // }
+        // var res = getsum(prompt('输入数字'), prompt('再输入数字'));
+        // alert(res);
+
+
+        // 写一个函数，用户输入任意三个不同数字的最大值，并能弹出运算后的结果
+        // function getkum(arr) {
+        //     var temp;
+        //     var max = arr[0];
+        //     for (var i = 0; i <= arr.length; i++) {
+        //         if (arr[i] > max) {
+        //             temp = arr[i];
+        //         }
+        //     }
+        //     return temp;
+        // }
+        // var resul = getkum([parseFloat(prompt('输入一个数字')), parseFloat(prompt('再输入一个数字')), parseFloat(prompt('最后输入一个数字'))]);
+        // alert(resul);
+
+        // alert(Math.max(parseFloat(prompt('输入一个数字')), parseFloat(prompt('再输入一个数字')), parseFloat(prompt('最后输入一个数字'))));
+
+
+
+        // 写一个函数，用户输入一个数判断是否是素数，并弹出返回值（又叫质数，只能被1和自身整除的数）
+        function getjum(jum1) {
+            for (var i = 2; i <= jum1 - 1; i++) {
+                if (jum1 % i == 0) {
+                    break;
+                }
+            }
+            if (i > jum1 - 1) {
+                return '是素数';
+            } else {
+                return '不是素数';
+            }
+        }
+        var result = getjum(prompt('输入一个数字'));
+        alert(result);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
