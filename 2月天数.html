@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>2021.7.26</title>
+    <script>
+        function backDay() {
+            var year = prompt('输入年份');
+            if (isRunYear(year)) {
+                console.log('是闰年2月有29天');
+            } else {
+                console.log('不是闰年2月有28天');
+            }
+        }
+        backDay();
+
+        function isRunYear(year) {
+            var flag = false;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                flag = true;
+            }
+            return flag;
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
