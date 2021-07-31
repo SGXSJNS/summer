@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj = new Object(); // 创建了一个空的对象
+        obj.umane = 'JNS';
+        obj.age = 20;
+        obj.sex = '男';
+        obj.sayHi = function() {
+                console.log('Hi~');
+            }
+            // (1)利用‘=’号赋值的方法 添加对象的属性和方法
+            // (2)每个属性和方法之间用 分号结束
+        console.log(obj.umane);
+        console.log(obj['age']);
+        obj.sayHi();
+
+
+        var huoying = new Object();
+        huoying.mrname = '鸣人';
+        huoying.mrage = 19;
+        huoying.mrsex = '男';
+        huoying.getskill = function() {
+            console.log('螺旋丸');
+        }
+        console.log(huoying.mrname);
+        console.log(huoying['mrage']);
+        huoying.getskill();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
