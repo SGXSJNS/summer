@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 创建一个电脑对象，该对象要有颜色，重量，品牌，型号，可以看电影，听音乐，打游戏和敲代码
+        var pc = {
+            color: 'red',
+            heigth: 2000,
+            brand: '神舟',
+            type: 'z7',
+            getSkill: function() {
+                console.log('看电影', '听音乐', '打游戏', '敲代码');
+            }
+
+        }
+        pc.getSkill();
+        for (var k in pc) {
+            // if (peter[k] instanceof Function) {
+            //     contine;
+            // }
+            console.log(pc[k]);
+        }
+        // 创建一个按钮对象，该对象中需要包含宽，高，背景颜色和点击行为
+        var button = new Object();
+        button.wide = 7;
+        button.high = 8;
+        button.grandcolor = 'pink';
+        button.getDo = function() {
+            console.log('点击');
+        }
+        console.log(button.wide);
+        console.log(button['grandcolor']);
+        button.getDo();
+        // 创建一个车的对象，该对象要有重量，颜色，牌子，可以载人，拉货和耕田
+        function Car(num1, num2, num3) {
+            this.weight = num1;
+            this.ccolor = num2;
+            this.type = num3;
+            this.toDo = function(do1, do2, do3) {
+                console.log(do1, do2, do3);
+            }
+        }
+        var hq = new Car(30000, 'black', '红旗');
+        console.log(hq['weight']);
+        hq.toDo('载人', '拉货', '耕田');
+        // 写一个函数，实现反转任意数组
+        function sort(arr) {
+            var arr1 = [];
+            for (var i = arr.length - 1; i >= 0; i--) {
+                arr1[arr1.length] = arr[i];
+            }
+            return arr1;
+        }
+        var re = sort([1, 2, 3]);
+        console.log(re);
+        // 写一个函数，实现对数字数组的排序
+        function getArr(srr) {
+            for (var i = 0; i < srr.length; i++) {
+                for (var k = 0; k < srr.length - i; k++) {
+                    if (srr[k] > srr[k + 1]) {
+                        var temp = srr[k];
+                        srr[k] = srr[k + 1];
+                        srr[k + 1] = temp;
+                    }
+                }
+            }
+            return srr;
+        }
+        var res = getArr([5, 66, 99, 5, 1]);
+        console.log(res);
+        // 简易计算器
+        for (var i = 0; i <= Infinity; i++) {
+            var j = prompt('简易计算器：\n' + '1.加法\n' + '2.减法\n' + '3.乘法\n' + '4.除法\n' + '5.退出\n' + '输入选项：');
+            if (j == 1) {
+                var k = prompt('输入数值');
+                var l = prompt('输入数值');
+                alert(parseFloat(k) + parseFloat(l));
+            } else if (j == 2) {
+                var k = prompt('输入数值');
+                var l = prompt('输入数值');
+                alert(parseFloat(k) - parseFloat(l));
+            } else if (j == 3) {
+                var k = prompt('输入数值');
+                var l = prompt('输入数值');
+                alert(parseFloat(k) * parseFloat(l));
+            } else if (j == 4) {
+                var k = prompt('输入数值');
+                var l = prompt('输入数值');
+                alert(parseFloat(k) / parseFloat(l));
+            } else if (j == 5) {
+                break;
+            } else {
+                alert('输入错误请重新输入')
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
