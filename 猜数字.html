@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Math.floor(Math.random() * (max - min + 1)) + min;
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        var radom = getRandom(1, 100);
+        for (var i = 0; i <= Infinity; i++) {
+            var j = prompt('输入数字猜');
+            if (j > radom) {
+                alert('no~no~no~猜大了');
+            } else if (j < radom) {
+                alert('不~不~不~猜小了');
+            } else if (j == radom) {
+                alert('猜对了真🐂🍺');
+                break;
+            } else {
+                alert('输入错误请重新输入');
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
