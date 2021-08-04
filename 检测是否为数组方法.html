@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 反转数组
+        function getArr(arr1) {
+            if (arr1 instanceof Array) {
+                var arr = [];
+                for (var i = arr1.length - 1; i >= 0; i--) {
+                    arr[arr.length] = arr1[i]
+                }
+                return arr;
+            } else {
+                return '这个参数要求必须是数组格式[1,2,3]'
+            }
+        }
+        console.log(getArr([1, 2, 3]));
+        console.log(getArr(1, 2, 3));
+        // 检测是否为数组
+        // (1) instanceof 运算符 用来检测是否为数组
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array);
+        console.log(obj instanceof Array);
+        // (2)Array.isArray(参数);
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(obj));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
