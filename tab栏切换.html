@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="CH-zn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .tab {
+            margin: 100px 0 0 500px;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .tab .list {
+            overflow: hidden;
+            width: 500px;
+            height: 39px;
+            background-color: rgb(128, 126, 126);
+            border: 1px solid black;
+        }
+        
+        .list li {
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .list .cur {
+            background-color: red;
+            color: #fff;
+        }
+        
+        .item {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="list">
+            <ul>
+                <li class="cur">介绍</li>
+                <li>规格</li>
+                <li>售后</li>
+                <li>评价</li>
+                <li>社区</li>
+            </ul>
+        </div>
+        <div class="con">
+            <div class="item" style="display: block;">
+                商品模块内容
+            </div>
+            <div class="item">
+                规格模块内容
+            </div>
+            <div class="item">
+                售后模块内容
+            </div>
+            <div class="item">
+                评价模块内容
+            </div>
+            <div class="item">
+                社区模块内容
+            </div>
+        </div>
+    </div>
+    <script>
+        var list = document.querySelector('.list');
+        var lis = list.querySelectorAll('li');
+        var items = document.querySelectorAll('.item');
+        // 循环绑定事件
+        for (var i = 0; i < lis.length; i++) {
+            // 给5个li  设置索引号
+            lis[i].setAttribute('index', i);
+            lis[i].onclick = function() {
+                // 其余li清除class这个类
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].className = '';
+                }
+                // 留下我自己
+                this.className = 'cur';
+                // 下面的显示内容模块
+                var index = this.getAttribute('index');
+                console.log(index);
+                // 隐藏其余item
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.display = 'none';
+                }
+                // 留下我自己
+                items[index].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>
