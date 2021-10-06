@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id=""></textarea>
+    <button>发布</button>
+    <ul>
+
+    </ul>
+    <script>
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        btn.onclick = function() {
+            if (text.value == '') {
+                alert('你没有输入内容');
+                return false;
+            } else {
+                // 创建元素
+                var lis = document.createElement('li');
+                // 现有li  才能赋值
+                lis.innerHTML = text.value + "<a href='javascript:;'>删除</a>";
+                // 添加元素
+                ul.insertBefore(lis, ul.children[0]);
+                // 留言发布后删除留言板内容
+                text.value = '';
+                // 删除元素  删除的是当前链接的li  它的父亲
+                var as = document.querySelectorAll('a');
+                for (var i = 0; i < as.length; i++) {
+                    as[i].onclick = function() {
+                        // 删除的是a的父级li li的父级是ul  孙子让爷爷删爸爸
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
