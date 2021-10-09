@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+        }
+
+        // 错误的演示   如果要访问原型对象的成员，必须先设置原型对象，在使用构造函数创建对象
+        // var p = new Person('ml', 20, '女');
+        // p.sayHi();
+
+
+        // Person.prototype.sayHi = function() {
+        //     console.log(this.name);
+        // }
+
+        // 简便的方式设置原型对象
+
+        // 当前重新设置构造函数的prototype，一定要重新设置contructor属性
+        Person.prototype = {
+            constructor: Person,
+            sayHi: function() {
+                console.log(this.name);
+            },
+            test: function() {
+                console.log(this.age);
+            }
+        }
+
+        console.dir(Person.prototype);
+
+        var p1 = new Person('jns', 20, '男');
+        console.log(p1.constructor);
+    </script>
+</body>
+
+</html>
