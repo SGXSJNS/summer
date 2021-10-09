@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Person(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+            this.type = 'human';
+        }
+        //原型对象--->对象  原型对象有一个属性constructor
+        console.dir(Person.prototype);
+        // 可以通过  构造函数的原型对象，给对象增加成员
+        Person.prototype.sayHi = function() {
+                console.log('大家好，我是' + this.name);
+            }
+            // 原型中增加了属性
+        Person.prototype.type = 'human';
+        var p1 = new Person('jns', 20, '男');
+        var p2 = new Person('ml', 20, '女');
+        // 所有对象可以共享  构造函数的原型对象中的成员
+        // p1.sayHi();
+        // p2.sayHi();
+        // console.log(p1.sayHi === p2.sayHi);
+        //console.log(p1.type);
+        p1.type = 'p1 human';
+        console.log(p2.type);
+    </script>
+</body>
+
+</html>
